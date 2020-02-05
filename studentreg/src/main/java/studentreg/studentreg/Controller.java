@@ -25,21 +25,20 @@ public class Controller {
 	@GetMapping("/student")
 	public ResponseEntity<List<Student>> getAllStudents() {
 		List<Student> list = service.getAllStudents();
-
-		return new ResponseEntity<List<Student>>(list, HttpStatus.OK);
+        return new ResponseEntity<List<Student>>(list, HttpStatus.OK);
 	}
 
 	@GetMapping("/student/{id}")
 	public ResponseEntity<Student> getStudentById(@PathVariable("id") int id)  {
 		Student entity = service.getStudentById(id);
-
 		return new ResponseEntity<Student>(entity, new HttpHeaders(), HttpStatus.OK);
 	}
 
 	@PostMapping("/post")
-	public ResponseEntity<Student> createOrUpdateStudent(@RequestBody Student student)
+	public List<Student> createOrUpdateStudent(@RequestBody Student student)
 			 {
-		Student updated = service.createOrUpdateStudent(student);
-		return new ResponseEntity<Student>(updated, new HttpHeaders(), HttpStatus.OK);
+		List<Student> updated = service.createOrUpdateStudent(student);
+	//	return new ResponseEntity<Student>(updated, new HttpHeaders(), HttpStatus.OK);
+	 return updated;
 	}
 }

@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "16688baa-51c0-4a79-83d9-f973bfca1678",
+		"name": "update",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://single4.gateway.webmcloud.com/rest/apigateway/policies/195bac9d-1e79-4725-8ded-5e5c74c20d28",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "single4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n   \"policy\":{ \r\n      \"id\":\"195bac9d-1e79-4725-8ded-5e5c74c20d28\",\r\n      \"names\":[ \r\n         { \r\n            \"value\":\"sql\",\r\n            \"locale\":\"English\"\r\n         }\r\n      ],\r\n      \"parameters\":[ \r\n         { \r\n            \"templateKey\":\"customErrorMessage\",\r\n            \"values\":[ \r\n               \"Limit Exceeded\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"action\",\r\n            \"values\":[ \r\n               \"DENY\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"requestType\",\r\n            \"values\":[ \r\n               \"ALL\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"enableRule\",\r\n            \"values\":[ \r\n               \"Disable\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"rule\",\r\n            \"values\":[ \r\n               \"sql\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"ruleDescription\",\r\n            \"values\":[ \r\n               \"\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"ruleName\",\r\n            \"values\":[ \r\n               \"sql\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"ruleType\",\r\n            \"values\":[ \r\n               \"DENY\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"isEnterpriseGatewayLicensed\",\r\n            \"values\":[ \r\n               \"true\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"isRuleEnabled\",\r\n            \"values\":[ \r\n               \"true\"\r\n            ]\r\n         }\r\n      ],\r\n      \"policyEnforcements\":[ \r\n         { \r\n            \"enforcements\":[ \r\n               { \r\n                  \"enforcementObjectId\":\"a77524cd-7ecf-4d21-b51f-6274dab54c33\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"3ebf887b-3786-45c2-821f-3eae39c5bd79\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"f9bed81e-c504-4a46-900a-1c3fa0856fbd\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"99387456-2cfb-44c5-9f6a-23ab3b95d75d\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"d03f5d61-5463-4a2a-87c6-5ab0abc4e3ad\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"8ef75255-b647-4a18-95cf-0b8dc433490e\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"5ced1703-55db-4be3-9a0e-3081da04e4c3\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"913547e7-353b-48a2-bb70-124573bcb39d\",\r\n                  \"order\":null\r\n               }\r\n            ],\r\n            \"stageKey\":\"threatProtection\"\r\n         }\r\n      ],\r\n      \"active\":true,\r\n      \"global\":true,\r\n      \"systemPolicy\":false,\r\n      \"policyActionTemplateKeys\":[ \r\n         \"sqlInjectionFilter\"\r\n      ]\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "http://single4.gateway.webmcloud.com/rest/apigateway/policies/195bac9d-1e79-4725-8ded-5e5c74c20d28",
+					"protocol": "http",
+					"host": [
+						"single4",
+						"gateway",
+						"webmcloud",
+						"com"
+					],
+					"path": [
+						"rest",
+						"apigateway",
+						"policies",
+						"195bac9d-1e79-4725-8ded-5e5c74c20d28"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Enable",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n   \"policy\":{ \r\n      \"id\":\"195bac9d-1e79-4725-8ded-5e5c74c20d28\",\r\n      \"names\":[ \r\n         { \r\n            \"value\":\"sql\",\r\n            \"locale\":\"English\"\r\n         }\r\n      ],\r\n      \"parameters\":[ \r\n         { \r\n            \"templateKey\":\"customErrorMessage\",\r\n            \"values\":[ \r\n               \"Limit Exceeded\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"action\",\r\n            \"values\":[ \r\n               \"DENY\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"requestType\",\r\n            \"values\":[ \r\n               \"ALL\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"enableRule\",\r\n            \"values\":[ \r\n               \"Disable\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"rule\",\r\n            \"values\":[ \r\n               \"sql\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"ruleDescription\",\r\n            \"values\":[ \r\n               \"\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"ruleName\",\r\n            \"values\":[ \r\n               \"sql\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"ruleType\",\r\n            \"values\":[ \r\n               \"DENY\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"isEnterpriseGatewayLicensed\",\r\n            \"values\":[ \r\n               \"true\"\r\n            ]\r\n         },\r\n         { \r\n            \"templateKey\":\"isRuleEnabled\",\r\n            \"values\":[ \r\n               \"true\"\r\n            ]\r\n         }\r\n      ],\r\n      \"policyEnforcements\":[ \r\n         { \r\n            \"enforcements\":[ \r\n               { \r\n                  \"enforcementObjectId\":\"a77524cd-7ecf-4d21-b51f-6274dab54c33\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"3ebf887b-3786-45c2-821f-3eae39c5bd79\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"f9bed81e-c504-4a46-900a-1c3fa0856fbd\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"99387456-2cfb-44c5-9f6a-23ab3b95d75d\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"d03f5d61-5463-4a2a-87c6-5ab0abc4e3ad\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"8ef75255-b647-4a18-95cf-0b8dc433490e\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"5ced1703-55db-4be3-9a0e-3081da04e4c3\",\r\n                  \"order\":null\r\n               },\r\n               { \r\n                  \"enforcementObjectId\":\"913547e7-353b-48a2-bb70-124573bcb39d\",\r\n                  \"order\":null\r\n               }\r\n            ],\r\n            \"stageKey\":\"threatProtection\"\r\n         }\r\n      ],\r\n      \"active\":true,\r\n      \"global\":true,\r\n      \"systemPolicy\":false,\r\n      \"policyActionTemplateKeys\":[ \r\n         \"sqlInjectionFilter\"\r\n      ]\r\n   }\r\n}"
+						},
+						"url": {
+							"raw": "http://single4.gateway.webmcloud.com/rest/apigateway/policies/195bac9d-1e79-4725-8ded-5e5c74c20d28",
+							"protocol": "http",
+							"host": [
+								"single4",
+								"gateway",
+								"webmcloud",
+								"com"
+							],
+							"path": [
+								"rest",
+								"apigateway",
+								"policies",
+								"195bac9d-1e79-4725-8ded-5e5c74c20d28"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 18 Sep 2019 09:34:24 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "APICLOUD-ALB"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1442"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"policy\": {\n        \"id\": \"195bac9d-1e79-4725-8ded-5e5c74c20d28\",\n        \"names\": [\n            {\n                \"value\": \"sql\",\n                \"locale\": \"English\"\n            }\n        ],\n        \"parameters\": [\n            {\n                \"templateKey\": \"customErrorMessage\",\n                \"values\": [\n                    \"Limit Exceeded\"\n                ]\n            },\n            {\n                \"templateKey\": \"action\",\n                \"values\": [\n                    \"DENY\"\n                ]\n            },\n            {\n                \"templateKey\": \"requestType\",\n                \"values\": [\n                    \"ALL\"\n                ]\n            },\n            {\n                \"templateKey\": \"enableRule\",\n                \"values\": [\n                    \"Disable\"\n                ]\n            },\n            {\n                \"templateKey\": \"rule\",\n                \"values\": [\n                    \"sql\"\n                ]\n            },\n            {\n                \"templateKey\": \"ruleDescription\",\n                \"values\": [\n                    \"\"\n                ]\n            },\n            {\n                \"templateKey\": \"ruleName\",\n                \"values\": [\n                    \"sql\"\n                ]\n            },\n            {\n                \"templateKey\": \"ruleType\",\n                \"values\": [\n                    \"DENY\"\n                ]\n            },\n            {\n                \"templateKey\": \"isEnterpriseGatewayLicensed\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"isRuleEnabled\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storedRuleType\",\n                \"values\": [\n                    \"DENY\"\n                ]\n            }\n        ],\n        \"policyEnforcements\": [\n            {\n                \"enforcements\": [\n                    {\n                        \"enforcementObjectId\": \"a77524cd-7ecf-4d21-b51f-6274dab54c33\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"3ebf887b-3786-45c2-821f-3eae39c5bd79\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"f9bed81e-c504-4a46-900a-1c3fa0856fbd\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"99387456-2cfb-44c5-9f6a-23ab3b95d75d\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"d03f5d61-5463-4a2a-87c6-5ab0abc4e3ad\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"8ef75255-b647-4a18-95cf-0b8dc433490e\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"5ced1703-55db-4be3-9a0e-3081da04e4c3\",\n                        \"order\": null\n                    },\n                    {\n                        \"enforcementObjectId\": \"913547e7-353b-48a2-bb70-124573bcb39d\",\n                        \"order\": null\n                    }\n                ],\n                \"stageKey\": \"threatProtection\"\n            }\n        ],\n        \"active\": true,\n        \"global\": true,\n        \"systemPolicy\": false,\n        \"policyActionTemplateKeys\": [\n            \"sqlInjectionFilter\"\n        ]\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

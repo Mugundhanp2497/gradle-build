@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "d0fe5bd3-6450-4604-b8cd-c88bb1a4467e",
+		"name": "create",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "\thttp://single4.gateway.webmcloud.com/rest/apigateway/policyActions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ceb1976b-f40d-4b41-be22-e1c54e07cff6",
+						"exec": [
+							"\r",
+							"var jsonData = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"policyActionIdLogInvocation\", jsonData.policyAction.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Test123$",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "single4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"policyAction\": {\n        \n        \"names\": [\n            {\n                \"value\": \"Log Invocation\",\n                \"locale\": \"en\"\n            }\n        ],\n        \"templateKey\": \"logInvocation\",\n        \"parameters\": [\n            {\n                \"templateKey\": \"storeRequestPayload\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storeResponsePayload\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storeAsZip\",\n                \"values\": [\n                    \"false\"\n                ]\n            },\n            {\n                \"templateKey\": \"logGenerationFrequency\",\n                \"values\": [\n                    \"Always\"\n                ]\n            },\n            {\n                \"templateKey\": \"destination\",\n                \"parameters\": [\n                    {\n                        \"templateKey\": \"destinationType\",\n                        \"values\": [\n                            \"GATEWAY\"\n                        ]\n                    }\n                ]\n            },\n            {\n                \"templateKey\": \"destination\",\n                \"parameters\": [\n                    {\n                        \"templateKey\": \"destinationType\",\n                        \"values\": [\n                            \"APIPORTAL\"\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"active\": false\n    }\n}"
+				},
+				"url": {
+					"raw": "http://single4.gateway.webmcloud.com/rest/apigateway/policyActions",
+					"protocol": "http",
+					"host": [
+						"single4",
+						"gateway",
+						"webmcloud",
+						"com"
+					],
+					"path": [
+						"rest",
+						"apigateway",
+						"policyActions"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"policyAction\": {\n        \n        \"names\": [\n            {\n                \"value\": \"Log Invocation\",\n                \"locale\": \"en\"\n            }\n        ],\n        \"templateKey\": \"logInvocation\",\n        \"parameters\": [\n            {\n                \"templateKey\": \"storeRequestPayload\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storeResponsePayload\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storeAsZip\",\n                \"values\": [\n                    \"false\"\n                ]\n            },\n            {\n                \"templateKey\": \"logGenerationFrequency\",\n                \"values\": [\n                    \"Always\"\n                ]\n            },\n            {\n                \"templateKey\": \"destination\",\n                \"parameters\": [\n                    {\n                        \"templateKey\": \"destinationType\",\n                        \"values\": [\n                            \"GATEWAY\"\n                        ]\n                    }\n                ]\n            },\n            {\n                \"templateKey\": \"destination\",\n                \"parameters\": [\n                    {\n                        \"templateKey\": \"destinationType\",\n                        \"values\": [\n                            \"APIPORTAL\"\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"active\": false\n    }\n}"
+						},
+						"url": {
+							"raw": "http://single4.gateway.webmcloud.com/rest/apigateway/policyActions",
+							"protocol": "http",
+							"host": [
+								"single4",
+								"gateway",
+								"webmcloud",
+								"com"
+							],
+							"path": [
+								"rest",
+								"apigateway",
+								"policyActions"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 14 Jun 2019 05:13:59 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "APICLOUD-ALB"
+						},
+						{
+							"key": "Content-Length",
+							"value": "597"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"policyAction\": {\n        \"id\": \"c346ae6b-e3b3-465b-9ed3-134f16e5900e\",\n        \"names\": [\n            {\n                \"value\": \"Log Invocation\",\n                \"locale\": \"en\"\n            }\n        ],\n        \"templateKey\": \"logInvocation\",\n        \"parameters\": [\n            {\n                \"templateKey\": \"storeRequestPayload\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storeResponsePayload\",\n                \"values\": [\n                    \"true\"\n                ]\n            },\n            {\n                \"templateKey\": \"storeAsZip\",\n                \"values\": [\n                    \"false\"\n                ]\n            },\n            {\n                \"templateKey\": \"logGenerationFrequency\",\n                \"values\": [\n                    \"Always\"\n                ]\n            },\n            {\n                \"templateKey\": \"destination\",\n                \"parameters\": [\n                    {\n                        \"templateKey\": \"destinationType\",\n                        \"values\": [\n                            \"GATEWAY\"\n                        ]\n                    }\n                ]\n            },\n            {\n                \"templateKey\": \"destination\",\n                \"parameters\": [\n                    {\n                        \"templateKey\": \"destinationType\",\n                        \"values\": [\n                            \"APIPORTAL\"\n                        ]\n                    }\n                ]\n            }\n        ],\n        \"active\": false\n    }\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
